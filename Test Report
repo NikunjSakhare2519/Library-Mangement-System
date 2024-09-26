@@ -1,0 +1,45 @@
+
+# Library Management System - Test Report
+
+## Project: Library Management System  
+**Test Date**: [27/09/2024]  
+**Tester**: [Nikunj Sakhare]  
+**Test Environment**:  
+- Operating System: Windows 11  
+- Java Version: Java 20 (Released in March 2024)
+- IDE: IntelliJ IDEA 2023.2.2
+
+---
+
+## Test Summary
+The Library Management System was tested for basic functionality, including adding, borrowing, returning, and viewing books. All primary features were validated through manual testing, and each test case result was recorded below.
+
+### Test Cases
+
+| Test Case ID | Test Case Description                   | Test Steps                                                                                                                                                   | Expected Outcome                                                                               | Actual Outcome                                                 | Status   |
+|--------------|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------|
+| TC001        | Add a new book to the library           | 1. Open the application.<br> 2. Navigate to the "Add Book" section.<br> 3. Enter a unique ISBN, title, author, and publication year.<br> 4. Click "Add Book". | The book should be added to the library's collection, and a success message should appear.       | The book was added successfully, and a success message appeared. | Pass     |
+| TC002        | Add a duplicate book (same ISBN)        | 1. Try to add the same book (with the same ISBN) as in TC001.                                                                                                 | The system should prevent adding duplicate ISBNs and show an error message.                     | The system displayed an error message preventing duplicate entry. | Pass     |
+| TC003        | View available books                    | 1. Open the "View Available Books" section.<br> 2. Ensure that all books added are displayed in the list.                                                     | All added books should appear in the available books list.                                     | All added books were listed correctly.                         | Pass     |
+| TC004        | Borrow an available book                | 1. Navigate to the "Borrow Book" section.<br> 2. Select a book from the list of available books.<br> 3. Click "Borrow".                                       | The selected book should be marked as borrowed, and the availability should be updated.         | The book was marked as borrowed, and availability was updated.  | Pass     |
+| TC005        | Borrow an unavailable book (already borrowed) | 1. Try to borrow the same book that was borrowed in TC004.<br> 2. Click "Borrow".                                                                             | The system should display an error message indicating that the book is unavailable.             | The system displayed an error message for the unavailable book. | Pass     |
+| TC006        | Return a borrowed book                  | 1. Navigate to the "Return Book" section.<br> 2. Select the previously borrowed book.<br> 3. Click "Return".                                                  | The book should be returned, and its availability should be updated accordingly.                | The book was returned, and its availability was updated.        | Pass     |
+| TC007        | View available books after returning    | 1. Navigate to "View Available Books" after returning a book.<br> 2. Ensure that the returned book appears in the list.                                       | The returned book should reappear in the available books list.                                 | The returned book reappeared in the available list.             | Pass     |
+| TC008        | Add a book with incomplete details      | 1. Try to add a book without filling all required fields (e.g., missing ISBN or title).                                                                       | The system should prevent the book from being added and display an error message.               | The system displayed an error message for incomplete book details. | Pass     |
+
+
+
+## Test Results Summary
+
+| Status   | Count |
+|----------|-------|
+| Pass     | 8     |
+| Fail     | 0     |
+
+---
+
+## Issues Found
+- No issues were found during testing. All test cases passed successfully.
+
+## Conclusion
+The Library Management System has passed all functional test cases. The basic operations, such as adding books, borrowing, returning, and viewing available books, worked as expected. No critical bugs were identified during testing.
