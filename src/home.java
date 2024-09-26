@@ -65,6 +65,11 @@ public class home extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(51, 153, 255));
         jButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jButton4.setText("RETURN BOOK");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(255, 255, 153));
         jButton5.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -136,6 +141,11 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         new newBook().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        new returnBook().setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
